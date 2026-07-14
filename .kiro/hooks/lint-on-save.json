@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Remind Coding Standards on Save",
+      "trigger": "PostFileSave",
+      "matcher": "\\.(html|css|js)$",
+      "action": {
+        "type": "agent",
+        "prompt": "A file was just saved. Check that the change follows the project coding standards: CSS custom properties used for colors/spacing, no external libraries, JS stays in app.js, and all localStorage access uses the load()/save() helpers."
+      }
+    }
+  ]
+}
